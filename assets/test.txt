@@ -1,0 +1,11 @@
+# Valid Commands
+# node <name>
+# dialogue <string>
+# choice <node_name> <string>
+# event <event_name>
+
+node start
+dialogue "Hello world!"
+
+node end
+event "exit"

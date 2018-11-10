@@ -1,0 +1,29 @@
+event: newgame
+
+node: newgame1
+dialogue: "Hello there"
+
+node: newgame2
+dialogue: "It looks like you're trying to test the game engine"
+
+node: newgame3
+dialogue: "time to test the choice engine..."
+choice: test1 "To first branch", test2 "To second branch", test3 "To third branch"
+
+node: test1
+dialogue: "You chose the first option"
+choice: newgame3 "Return to the hub"
+
+node: test2
+dialogue: "You chose the second option"
+choice: newgame3 "Return to the hub"
+
+node: test3
+dialogue: "You chose the third option"
+choice: newgame4 "Continue with the test"
+
+node: newgame4
+dialogue: "Congratulations on successfully navigating the dialogue tree"
+
+node: newgame5
+dialogue: "Now to test the next thing..."

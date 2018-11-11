@@ -14,11 +14,11 @@ Note all whitespace is ignored (spaces, tabs, newlines, etc.). Anything after a 
 
 ### Valid Commands
 - "*node nodeName*"			-	create a new node
-- "*dialogue msg*"			-	add dialogue (multiple calls adds newlines)
-- "*choice nodeName msg*"	-	offer a choice and jump to that node if chosen
+- "*dialogue ...*"			-	add dialogue (multiple calls adds newlines)
+- "*choice nodeName ...*"	-	offer a choice and jump to that node if chosen
 - "*default nodeName*"		-	the default jump (unnecessary if sequential). Note only works on zero-choice nodes
 
 ### Notes
 node start 					- the initial node
 node end 					- the final node, calls exit (no dialogue display)
-In choice or dialogue (in <str>) you can have "\n" or "\t" (separated by spaces)
+In choice or dialogue, the strings "\n" or "\t" do their character equivalents (when separated on either side by spaces)

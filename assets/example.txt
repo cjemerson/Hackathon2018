@@ -1,0 +1,52 @@
+# Ben Hedges
+# 10 Nov 2018
+# 
+# Demo file format
+
+############################
+# FILE FORMAT
+# Whitespace is ignored (strings are filled in with spaces)
+# Anything after '#' is ignored
+############################
+# VALID COMMANDS
+# node <node_name>			- end all be all
+# dialogue <str>			- display str (multiple calls add new lines)
+# choice <node_name> <str>	- any number of choices with displayed str
+# default <node_name>		- only applies to zero-choice events
+############################
+# Special
+# node start -- the initial node
+# node end -- the final node, calls exit (no dialogue)
+# in <str> you can have "\n" or "\t" (separated by spaces)
+############################
+
+node start
+dialogue				Hello there!
+
+node					start_1
+dialogue				It looks like you're trying to test the game engine \n
+
+node					start_2
+dialogue				This \n \t is \n \t \t a \n \t \t \t long \n \t \t \t \t  sentence... \n
+
+node hub
+dialogue				time to test the choice engine...
+choice		test1		To first branch
+choice		test2		To second branch
+choice		test3		To third branch
+
+node test1
+dialogue				You chose the first option
+choice		hub			Return to the hub
+
+node test2
+dialogue				You chose the second option
+choice		hub			Return to the hub
+
+node test3
+dialogue				You chose the third option
+choice		newgame4	Continue with the test
+
+node newgame4
+dialogue				Congratulations on successfully navigating the dialogue tree.
+dialogue				You're all done now!

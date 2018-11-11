@@ -3,8 +3,6 @@
 #ifndef FILE_TEXTPARSER_HPP_INCLUDED
 #define FILE_TEXTPARSER_HPP_INCLUDED
 
-#include <SFML/Graphics.hpp>
-
 #include <vector>
 #include <fstream>
 #include <sstream>
@@ -19,8 +17,6 @@ public:
 	static std::string getResourceName(std::string path);
 	static int parseInt(const std::string & token);
 	static float parseFloat(const std::string & token);
-	static sf::Vector2f parseVector2f(const std::vector<std::string> & tokens);
-	static sf::Vector2i parseVector2i(const std::vector<std::string> & tokens);
 
 private:
 	std::string _name;

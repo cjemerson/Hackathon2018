@@ -57,15 +57,3 @@ int TextParser::parseInt(const std::string & token) {
 float TextParser::parseFloat(const std::string & token) {
 	return std::stof(token);
 }
-
-sf::Vector2f TextParser::parseVector2f(const std::vector<std::string> & tokens) {
-	float x = (tokens.size() > 1)? parseFloat(tokens[1]): 0;
-	float y = (tokens.size() > 2)? parseFloat(tokens[2]): 0;
-	return sf::Vector2f(x, y);
-}
-
-sf::Vector2i TextParser::parseVector2i(const std::vector<std::string> & tokens) {
-	int x = (tokens.size() > 1)? parseInt(tokens[1]): 0;
-	int y = (tokens.size() > 2)? parseInt(tokens[2]): 0;
-	return sf::Vector2i(x, y);
-}

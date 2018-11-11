@@ -13,10 +13,10 @@
 Note all whitespace is ignored (spaces, tabs, newlines, etc.). Anything after a '#' is ignored so use this for comments.
 
 ### Valid Commands
-- node <node_name>			-	create a new node
-- dialogue <string>			-	add dialogue (multiple calls adds newlines)
-- choice <node_name> <str>	-	offer a choice and jump to that node if chosen
-- default <node_name>		-	the default jump (unnecessary if sequential). Note only works on zero-choice nodes
+- "*node nodeName*"			-	create a new node
+- "*dialogue msg*"			-	add dialogue (multiple calls adds newlines)
+- "*choice nodeName msg*"	-	offer a choice and jump to that node if chosen
+- "*default nodeName*"		-	the default jump (unnecessary if sequential). Note only works on zero-choice nodes
 
 ### Notes
 node start 					- the initial node
